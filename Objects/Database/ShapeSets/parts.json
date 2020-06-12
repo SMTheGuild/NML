@@ -1,0 +1,86 @@
+{
+	"partList": [
+		{
+			"uuid": "7c318eed-e91a-4a24-b3c8-67918258b80c",
+			"name": "obj_menu_node",
+			"renderable": {
+				"lodList": [
+					{
+						"subMeshList": [
+							{
+								"textureList": [
+									"$MOD_DATA/Objects/Textures/color_dif.tga",
+									"$MOD_DATA/Objects/Textures/default_asg.tga",
+									"$MOD_DATA/Objects/Textures/default_nor.tga"
+								],
+								"material": "DifAsgNor"
+							}
+						],
+						"mesh": "$MOD_DATA/Objects/Mesh/ball.mesh"
+					}
+				]
+			},
+			"rotationSet": "PropFull",
+			"color": "ffffff",
+			"hull": { "x": 1, "y": 1, "z": 1, "margin": 0.25, "pointList": [ { "x": 0, "y": 0, "z": 0 } ] },
+			"density": 1250,
+			"physicsMaterial": "Plastic",
+			"restitution": 0.1,
+			"friction": 0.1
+		},
+		{
+			"uuid": "01d56fb8-d1a9-4b65-9d30-d267a4b99058",
+			"name": "obj_interactive_menu_part",
+			"renderable": {
+				"lodList": [
+					{
+						"subMeshMap": {
+							"mounted_spudgun": {
+								"textureList": [
+									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_mountablespudgun_dif.tga",
+									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_mountablespudgun_asg.tga",
+									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_mountablespudgun_nor.tga"
+								],
+								"material": "PoseAnimDifAsgNor"
+							},
+							"barrel_basic": {
+								"textureList": [
+									"$GAME_DATA/Character/Char_Tools/Char_spudgun/Barrel/Barrel_basic/char_spudgun_barrel_basic_dif.tga",
+									"$GAME_DATA/Character/Char_Tools/Char_spudgun/Barrel/Barrel_basic/char_spudgun_barrel_basic_asg.tga",
+									"$GAME_DATA/Character/Char_Tools/Char_spudgun/Barrel/Barrel_basic/char_spudgun_barrel_basic_nor.tga"
+								],
+								"material": "DifAsgNor"
+							}
+						},
+						"mesh": "$GAME_DATA/Objects/Mesh/interactive/obj_interactive_mountablespudgun_off.fbx",
+						"pose0": "$GAME_DATA/Objects/Mesh/interactive/obj_interactive_mountablespudgun_on.fbx"
+					}
+				]
+			},
+			"color": "df7f01",
+			"hull": {
+				"x": 1,
+				"y": 1,
+				"z": 4,
+				"col": "$GAME_DATA/Objects/Collision/obj_interactive_mountablespudgun_col.obj",
+				"pointList": [ { "x": 0, "y": 0, "z": 0 } ]
+			},
+			"scripted": {
+				"filename": "$MOD_DATA/Scripts/MenuPart.lua",
+				"classname": "MenuPart"
+			},
+			"rotationSet": "PropYZ",
+			"sticky": "-Z-Y+Y-X+X",
+			"physicsMaterial": "Mechanical",
+			"ratings": {
+				"density": 7,
+				"durability": 5,
+				"friction": 4,
+				"buoyancy": 2
+			},
+			"flammable": false,
+			"density": 1250.0,
+			"qualityLevel": 4
+		}
+	]
+}
